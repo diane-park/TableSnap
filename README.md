@@ -1,5 +1,8 @@
 # TableSnap
-By: Ashley Brea, Ashley Kim, Diane Park
+Team Name: Algorithm Architects 
+
+Team Members: Ashley Brea, Ashley Kim, Diane Park
+
 Deep Learning Project Spring-2025
 
 ### Abstract:
