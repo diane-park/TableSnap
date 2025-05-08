@@ -1,4 +1,4 @@
-# TableSnap
+# TableSnap: Table Detection
 Team Name: Algorithm Architects 
 
 Team Members: Ashley Brea, Ashley Kim, Diane Park
@@ -14,7 +14,7 @@ We then use YOLOv5 as our baseline model for obejct detection. This was motivate
 
 Our next steps are to implement visualizations, and move onto row and column detection and mapping.
 
-### How to Run:
+### Setup & How to Run:
 Simply copy the CoLab Notebook and run all cells.
 
 Key challenges include identifying tables without visible borders, training with a limited dataset, handling mixed file formats (.jpg and .png), and addressing the dataset’s lack of handwritten text samples. Future work will focus on expanding the dataset and improving OCR performance for handwritten table data.
