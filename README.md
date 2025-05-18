@@ -16,4 +16,4 @@ We then use YOLOv5 as our baseline model for object detection. This was motivate
 As next steps, we aim to extend our model to perform row and column detection and structure recognition, ultimately enabling full table digitization.
 
 ### Setup & How to Run:
-Simply copy the CoLab Notebook and run all cells (except the training cells for the baseline and fine-tuning model if you want to download our pretrained best weights -- these instructions are provided within the Colab Notebook)
+Simply copy the Colab Notebook and run all cells from the beginning. If you do not want to retrain the baseline/fine-tuning model, you can download our pretrained model best weights for both models ([baseline model weights](diane-park/TableSnap/baseline_all_tables_best.pt), [deep learning model weights](diane-park/TableSnap/fine_tuned_all_tables_best.pt)), and instructions on how to modify filepaths within evaluation cells to use these files are provided within the Notebook. 
