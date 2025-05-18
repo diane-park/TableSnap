@@ -6,15 +6,14 @@ Team Members: Ashley Brea, Ashley Kim, Diane Park
 Deep Learning Project Spring-2025
 
 ### Abstract:
-Our project focuses on converting tables from images into CSV format, with the long-term goal of digitizing handwritten data tables. To achieve this, we begin by detecting table structures through object detection (Milestone 1). Then, we hope to identifying rows and columns map their relationships before applying OCR for text extraction.
 
-We build on previous research, such as CascadeTabNet (Prasad et al.) and DeCNT (Siddiqui et al.), which utilize deep learning for table detection and structure recognition. Using a filtered subset of the General Table Detection dataset (1,308 samples with a single table per page), we preprocess the data by extracting bounding box values and normalizing them relative to image dimensions. The dataset is split into training (70%), validation (20%), and testing (10%).
+Table detection in document images is a critical task in document analysis, facilitating the extraction of structured data from unstructured sources. In this project, we focus on detecting tables from images, with the long-term goal of digitizing handwritten data tables from images into CSV format. To achieve this, our current focus is on detecting table structures through object detection techniques.
 
-We then use YOLOv5 as our baseline model for obejct detection. This was motivated by YOLO's capacity to pad and resize images, allowing us to use images of different sizes. We continue to use YOLOv5 as our deep learning model, where we trander learning and fine tune our date by increasing the number of epochs and decrerasing the learning rate. Both the baseline model and the deep learning model are evaluated, and we do see an improvemnt in its metrics after the finetuning. 
+Building on prior work such as CascadeTabNet (Prasad et al.) and DeCNT (Siddiqui et al.), we leverage deep learning approaches for table detection. We use the General Table Detection dataset, initially training on a filtered subset of 1,308 images containing a single table per page. After validating our approach, we retrained on the full dataset of 2,835 images, including pages with multiple tables. We preprocessed the data by extracting bounding box values and normalizing them relative to image dimensions. Also, the dataset is split into training (70%), validation (20%), and testing (10%).
 
-Our next steps are to implement visualizations, and move onto row and column detection and mapping.
+We then use YOLOv5 as our baseline model for object detection. This was motivated by YOLO's capacity to pad, resize, and normalize images, as well as its pre-trained features. We continue to use YOLOv5 as our deep learning model, where we transfer learning and fine tune our model by increasing the number of epochs and decreasing the learning rate. We decided to fine-tune our model since we can build on our baseline that has already learned general features from the large dataset of YOLOv5. Additionally, our dataset for table detection is relatively limited in size, making fine-tuning a more suitable approach. Both the baseline model and the deep learning model are evaluated, and we do see a 13.7% improvement in mean Average Precision (mAP@05) after the finetuning. 
+
+As next steps, we aim to extend our model to perform row and column detection and structure recognition, ultimately enabling full table digitization.
 
 ### Setup & How to Run:
-Simply copy the CoLab Notebook and run all cells.
-
-Key challenges include identifying tables without visible borders, training with a limited dataset, handling mixed file formats (.jpg and .png), and addressing the dataset’s lack of handwritten text samples. Future work will focus on expanding the dataset and improving OCR performance for handwritten table data.
+Simply copy the CoLab Notebook and run all cells (except the training cells for the baseline and fine-tuning model if you want to download our pretrained best weights -- these instructions are provided within the Colab Notebook)
